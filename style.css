@@ -1,0 +1,195 @@
+:root{
+    --background-color: #000000;
+    --primary-color: #1c1d20;
+    --secondary-color: #4a4d57;
+    --accent-color: #ff7700;
+    --text-color: #f9f9f9;
+}
+
+
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: var(--text-color);
+
+}  
+
+
+body{
+    min-height: 100px;
+    padding: 15px;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h1{
+    font-family: Impact;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 70px;
+    font-weight: 800px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+
+.wrapper {
+    width: 800px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+#inputTodo {
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    background: none;
+    border: 2px solid var(--secondary-color);
+    border-radius: 2000px;
+    font: inherit;
+    color: var(--text-color);
+    caret-color: var(--accent-color);
+}
+
+
+#inputTodo:focus {
+    outline: none;
+}
+
+
+form {
+    position: relative;
+}
+
+
+#addTodo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--accent-color);
+    height: 100%;
+    padding: 0px 30px;
+    border: none;
+    border-radius: 2000px;
+    font: inherit;
+    color: var(--background-color);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.todo {
+    margin-bottom: 10px;
+    padding: 0px 16px;
+    background-color: var(--primary-color);
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+}
+
+
+.todo .todo-text{
+    padding: 15px;
+    padding-right: 0;
+    flex-grow: 2;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 300ms;
+}
+
+
+.deletebtn {
+    padding: 2px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.deletebtn:hover svg {
+    transition: 200ms ease;
+}
+
+
+.deletebtn:hover svg {
+    fill: red;
+}
+
+
+.custom-checkbox {
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    min-height: 20px;
+    min-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: 400ms ease;
+    cursor: pointer;
+}
+
+
+.custom-checkbox svg {
+    fill: transparent;
+}
+
+
+input[type="checkbox"]:checked ~ .custom-checkbox {
+    background-color: var(--accent-color);
+
+}
+
+
+input[type="checkbox"]:checked ~ .custom-checkbox svg {
+    fill: black;
+}
+
+
+input[type="checkbox"]:checked ~ .todo-text {
+    text-decoration: line-through;
+    color: var(--secondary-color)
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+
+@media(max-width: 500px) {
+    html {
+        font-family: Impact;
+        font-size: 12pt;
+    }
+    #addTodo {
+        position: unset;
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px;
+        height: auto;
+    }
+    h1 {
+        margin-top: 50%;
+        font-size: 15vw;
+    }
+}
