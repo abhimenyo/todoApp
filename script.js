@@ -16,17 +16,27 @@ todoForm.addEventListener('submit', function(e){
 
 function addTodo(){
     const todoText = todoInput.value.trim()
+
     if (todoText.length > 0) {
+
+        const addBtn = document.getElementById("addTodo");
+
+        addBtn.classList.add("clicked");
+
+        setTimeout(() => {
+            addBtn.classList.remove("clicked");
+        }, 300);
+
         const todoObj = {
             text: todoText,
             completed: false
         }
+
         allTodos.push(todoObj)
         updateTodoList()
         saveTodos()
         todoInput.value = ""
-    }    
-
+    }
 }
 
 
@@ -97,3 +107,4 @@ function getTodos() {
     const todos = localStorage.getItem("todos") || "[]"
     return JSON.parse(todos)
 }
+
