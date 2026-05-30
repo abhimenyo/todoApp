@@ -60,7 +60,7 @@ h1{
     background: none;
     border: 2px solid var(--secondary-color);
     border-radius: 2000px;
-    font: inherit;
+    font: Helvetica;
     color: var(--text-color);
     caret-color: var(--accent-color);
 }
