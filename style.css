@@ -211,3 +211,37 @@ input[type="checkbox"] {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-color)
 }
+
+.colorchange{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    
+}
+
+nav{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+nav button{
+    background: #1c1d20;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+nav button:hover{
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+nav button:active{
+    transform: translateY(0);
+}
