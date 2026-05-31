@@ -108,3 +108,46 @@ function getTodos() {
     return JSON.parse(todos)
 }
 
+const hexInput = document.getElementById("hexcode");
+
+const defaultBtn = document.getElementById("defaultColor");
+
+const DEFAULT_ACCENT = "#ff7700";
+
+const savedColor = localStorage.getItem("accentColor");
+
+if (savedColor) {
+    document.documentElement.style.setProperty(
+        "--accent-color",
+        savedColor
+    );
+    hexInput.value = savedColor;
+}
+
+hexInput.addEventListener("input", () => {
+    let color = hexInput.value;
+
+    if (!color.startsWith("#")) {
+        color = "#" + color.replace(/#/g, "");
+        hexInput.value = color;
+    }
+
+    if (/^#[0-9A-Fa-f]{6}$/.test(color)) {
+        document.documentElement.style.setProperty(
+            "--accent-color",
+            color
+        );
+
+        localStorage.setItem("accentColor", color);
+    }
+});
+
+defaultBtn.addEventListener("click", () => {
+    document.documentElement.style.setProperty(
+        "--accent-color",
+        DEFAULT_ACCENT
+    );
+
+    localStorage.setItem("accentColor", DEFAULT_ACCENT);
+    hexInput.value = DEFAULT_ACCENT;
+});

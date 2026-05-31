@@ -249,3 +249,24 @@ nav button:hover{
 nav button:active{
     transform: translateY(0);
 }
+
+#hexcode {
+    background: #1c1d20;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+#choosecolor {
+    color: #cfcfcf;
+    padding: 8px 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
