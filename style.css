@@ -270,3 +270,8 @@ nav button:active{
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+#signin{
+    margin-left: auto;
+    color: #80EF80;
+}

@@ -1,0 +1,79 @@
+:root{
+    --background-color: #000000;
+    --primary-color: #1c1d20;
+    --secondary-color: #4a4d57;
+    --accent-color: #ff7700;
+    --text-color: #f9f9f9;
+}
+
+
+*{
+    margin: 0;
+    padding: 0px;
+}
+
+h1{
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 60px;
+}
+ 
+
+body {
+    background-color: var(--background-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border: 1px solid;
+    border-color: var(--secondary-color);
+    border-radius: 30px;
+    padding: 40px;
+    width: 30%;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px;
+    border-radius: 10px;
+    background-color:var(--primary-color);
+    color: var(--text-color);
+}
+
+input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+#loginbtn {
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+
+.forgotpass{
+    color: rgb(159, 159, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent-color);
+    padding-top: 50px;
+}

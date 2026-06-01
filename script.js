@@ -151,3 +151,9 @@ defaultBtn.addEventListener("click", () => {
     localStorage.setItem("accentColor", DEFAULT_ACCENT);
     hexInput.value = DEFAULT_ACCENT;
 });
+
+const signInBtn = document.getElementById("signin");
+
+signInBtn.addEventListener("click", () => {
+    window.location.href = "./login/login.html";
+})
