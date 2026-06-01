@@ -74,6 +74,7 @@ input:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--accent-color);
+    color: rgb(120, 207, 251);
     padding-top: 50px;
 }
+
