@@ -12,11 +12,15 @@
     padding: 0px;
 }
 
-h1{
-    color: var(--text-color);
+#login {
+    color: var(--accent-color);
+    font-family: Helvetica;
     text-align: center;
     margin-bottom: 60px;
+    font-weight: 800;
+    font-size: 50px;
 }
+
  
 
 body {
@@ -44,15 +48,17 @@ form {
 input {
     margin-bottom: 30px;
     padding: 15px;
-    border: 1px;
+    border: none;
     border-radius: 10px;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
     color: var(--text-color);
+    caret-color: var(--accent-color);
 }
 
-input:focus{
+input:focus {
     outline: none;
     box-shadow: none;
+    border: none;
 }
 
 #loginbtn {
@@ -62,6 +68,9 @@ input:focus{
     box-shadow: none;
     border: none;
     cursor: pointer;
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .forgotpass{
